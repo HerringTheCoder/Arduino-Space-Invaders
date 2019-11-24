@@ -29,7 +29,9 @@ bool bulletFired = false;
 #define EXPLOSION 0b00101010 /*   * character */
 
 /*Speed control*/
-#define TIMESCALE 5 /*sets the time scale of objects (enemies, bullets) moving on the map, CYCLE_LIMIT*1ms = turn time */ 
+#define READ_DELAY 20
+#define TIMESCALE 5 /*sets the time scale of objects (enemies, bullets) moving on the map, TIMESCALE*READ_DELAY = turn time */ 
+/*Sound speed*/
 #define TEMPO 200 /*sets the sustain parameter of each note/pause, higher value = slower */
 
 void setup()
@@ -61,7 +63,7 @@ void loop()
    {
    fire();
    }
-delay(20);
+delay(READ_DELAY);
 } 
 noTone(BUZZER_DIO);
   moveBullets();
