@@ -2,7 +2,7 @@
 #include <LiquidCrystal_I2C.h>
 
 /* global variables */
-LiquidCrystal_I2C lcd(0x3f,20,4);  // set the LCD address to 0x3f for a 16 chars and 2 line display
+LiquidCrystal_I2C lcd(0x3f,16,2);  // set the LCD address to 0x3f for a 16 chars and 2 line display
 char gameMap[32][2]; /*declaring game map*/
 int gameTurns=0;
 bool bulletFired = false;
